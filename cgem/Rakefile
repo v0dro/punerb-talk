@@ -1,0 +1,15 @@
+require "bundler/gem_tasks"
+require "rspec/core/rake_task"
+require 'rake'
+require 'rake/extensiontask'
+
+RSpec::Core::RakeTask.new
+
+Rake::ExtensionTask.new do |ext|
+    ext.name = 'cgem'
+    ext.ext_dir = 'ext/cgem'
+    ext.lib_dir = 'lib/'
+    ext.source_pattern = "**/*.{c,cpp, h}"
+end
+
+task :test => [:compile,:spec]
