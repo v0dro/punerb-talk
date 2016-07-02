@@ -1,0 +1,1 @@
+See the slides of the talk here: https://speakerdeck.com/v0dro/introduction-benchmark-plot-at-prug
